@@ -1,4 +1,4 @@
-package rw.ac.rca.ne.cedric.utils;
+package ac.rca.kalpix.downloader.utils;
 
 public class Utility {
     public static String formatURL(String url) {

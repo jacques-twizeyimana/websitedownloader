@@ -1,4 +1,4 @@
-package rw.ac.rca.ne.cedric.utils;
+package ac.rca.kalpix.downloader.utils;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

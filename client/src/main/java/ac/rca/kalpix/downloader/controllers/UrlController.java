@@ -1,4 +1,4 @@
-package rw.ac.rca.ne.cedric.controllers;
+package ac.rca.kalpix.downloader.controllers;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.client.RestTemplate;
-import rw.ac.rca.ne.cedric.dao.Link;
-import rw.ac.rca.ne.cedric.dao.Website;
-import rw.ac.rca.ne.cedric.utils.ApiResponse;
-import rw.ac.rca.ne.cedric.utils.Utility;
+import ac.rca.kalpix.downloader.dao.Link;
+import ac.rca.kalpix.downloader.dao.Website;
+import ac.rca.kalpix.downloader.utils.ApiResponse;
+import ac.rca.kalpix.downloader.utils.Utility;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;

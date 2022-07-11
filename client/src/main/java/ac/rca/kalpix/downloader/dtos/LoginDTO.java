@@ -1,4 +1,4 @@
-package rw.ac.rca.ne.cedric.dtos;
+package ac.rca.kalpix.downloader.dtos;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

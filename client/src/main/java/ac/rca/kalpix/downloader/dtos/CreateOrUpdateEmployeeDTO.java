@@ -1,6 +1,6 @@
-package rw.ac.rca.ne.cedric.dtos;
+package ac.rca.kalpix.downloader.dtos;
 
-import rw.ac.rca.ne.cedric.enums.EDepartments;
+import ac.rca.kalpix.downloader.enums.EDepartments;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

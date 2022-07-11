@@ -1,6 +1,6 @@
-package rw.ac.rca.ne.cedric.dtos;
+package ac.rca.kalpix.downloader.dtos;
 
-import rw.ac.rca.ne.cedric.enums.ERole;
+import ac.rca.kalpix.downloader.enums.ERole;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

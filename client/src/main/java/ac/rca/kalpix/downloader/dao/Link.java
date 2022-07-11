@@ -1,4 +1,4 @@
-package rw.ac.rca.ne.cedric.dao;
+package ac.rca.kalpix.downloader.dao;
 
 import lombok.Getter;
 import lombok.Setter;

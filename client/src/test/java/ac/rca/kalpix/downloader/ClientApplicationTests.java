@@ -1,4 +1,4 @@
-package rw.ac.rca.ne.cedric;
+package ac.rca.kalpix.downloader;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

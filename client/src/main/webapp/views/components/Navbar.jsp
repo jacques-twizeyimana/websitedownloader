@@ -17,14 +17,16 @@
         .navbar-container{
             display: flex;
             flex-direction: row;
-            height: 3rem;
+            /*height: 3rem;*/
             width: 100%;
-            background: #193074;
+            background: rgb(20 83 45);
             justify-content: space-between;
-            padding: 10px;
+            align-items: center;
+            padding: 10px 50px;
         }
         .navbar-container h2{
-            font-size: 16px;
+            font-weight: bold;
+            font-size: 30px;
             color: white;
         }
         .navbar-container a{
@@ -35,8 +37,8 @@
 </head>
 <body>
 <div class="navbar-container">
-    <a href="/">Website Download Manager</a>
-    <a href="/report">Report</a>
+    <h2><a href="/">WEBSITE DOWNLOADER</a></h2>
+    <a href="/report">History</a>
 </div>
 </body>
 </html>

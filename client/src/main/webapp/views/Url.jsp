@@ -19,14 +19,18 @@
         }
 
         .text-primary {
-            color: #193074 !important;
+            color: rgb(20 83 45) !important;
+        }
+        .flex{
+            display: flex;
+            gap: 5px;
         }
    </style>
 </head>
 <body>
 <jsp:include page="components/Navbar.jsp"></jsp:include>
 <div class="container mt-5" style="width: 100%;max-width: 700px">
-    <h1 class="text-primary fw-bold">Enter your url</h1>
+    <h1 class="text-primary fw-bold text-center">Website to download</h1>
     <c:if test="${not empty param['registered']}">
         <div class="alert alert-success">
             <strong>Success!</strong> You have inputed correct url.
@@ -38,14 +42,9 @@
         </div>
     </c:if>
     <div class="mt-5">
-        <form action="/download" method="post">
-            <div class="form-group">
-                <label for="url">URL</label>
-                <input type="text" name="url" class="form-control" id="url" placeholder="Enter your url">
-            </div>
-            <div class="mt-5">
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
+        <form action="/download" method="post" class="form-inline flex my-2 my-lg-0">
+            <input type="text" name="url"  class="form-control form-control-lg mr-sm-2" id="url" placeholder="https://example.com">
+            <button type="submit" class="btn-lg btn btn-primary my-2 my-sm-0">Download</button>
         </form>
     </div>
 </div>

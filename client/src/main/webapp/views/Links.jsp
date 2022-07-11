@@ -54,7 +54,7 @@
             padding-top: 12px;
         }
         a{
-            color: black;
+            color: dodgerblue;
             text-decoration: underline;
         }
     </style>

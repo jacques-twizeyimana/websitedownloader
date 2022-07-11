@@ -27,7 +27,7 @@ public class Website {
     private String elapsedTime;
 
     @Column(name="total_download_kilobytes")
-    private int totalKilobytes;
+    private long totalKilobytes;
 
     @OneToMany
     @JoinColumn(name = "website_id")
@@ -36,7 +36,7 @@ public class Website {
     public Website() {
     }
 
-    public Website(String websiteName, String downloadStartTime, String downloadEndTime, String elapsedTime, int totalKilobytes) {
+    public Website(String websiteName, String downloadStartTime, String downloadEndTime, String elapsedTime, long totalKilobytes) {
         this.websiteName = websiteName;
         this.downloadStartTime = downloadStartTime;
         this.downloadEndTime = downloadEndTime;
@@ -85,11 +85,11 @@ public class Website {
         this.elapsedTime = elapsedTime;
     }
 
-    public int getTotalKilobytes() {
+    public long getTotalKilobytes() {
         return totalKilobytes;
     }
 
-    public void setTotalKilobytes(int totalKilobytes) {
+    public void setTotalKilobytes(long totalKilobytes) {
         this.totalKilobytes = totalKilobytes;
     }
 }

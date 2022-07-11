@@ -3,6 +3,9 @@ package ac.rca.downloaderbackend.downloader;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +16,17 @@ public class Downloader {
         this.url = url;
     }
 
-    public void start() throws MalformedURLException {
+    public Long getFolderSize(String folderDir) throws IOException {
+        Path folder = Paths.get(folderDir);
+        long size = Files.walk(folder)
+                .filter(p -> p.toFile().isFile())
+                .mapToLong(p -> p.toFile().length())
+                .sum();
+
+       return size;
+    }
+
+    public long start() throws IOException {
         String domain;
         String name;
         LinkParser linkParser = new LinkParser();
@@ -114,8 +127,11 @@ public class Downloader {
                 exception.printStackTrace();
             }
         }
-        //code ends
+
         System.out.println("#####################");
+        //find total folder size
+        return this.getFolderSize(rootFolderName);
+
     }
 
 }

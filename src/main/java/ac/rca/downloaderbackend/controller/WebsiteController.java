@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.time.Period;
 import java.util.List;
@@ -38,7 +39,7 @@ public class WebsiteController {
     }
 
     @PostMapping(path = "/")
-    public ResponseEntity<ApiResponse> register(@RequestBody WebsiteDto dto) throws MalformedURLException {
+    public ResponseEntity<ApiResponse> register(@RequestBody WebsiteDto dto) throws IOException {
 
         System.out.println("Going to download website");
 
@@ -47,7 +48,7 @@ public class WebsiteController {
         Downloader downloader = new Downloader(dto.getUrl());
 
         LocalDateTime startTime = LocalDateTime.now();
-        downloader.start();
+        website.setTotalKilobytes(downloader.start());
         LocalDateTime endTime = LocalDateTime.now();
 
 

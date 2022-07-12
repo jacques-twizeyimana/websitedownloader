@@ -124,11 +124,7 @@ public class WebsiteServiceImpl implements IWebsiteService {
                 if (link.isEmpty()) continue;
                 Boolean isFromSameSite = link.charAt(0) == '/' || !link.startsWith("http");
                 if (isFromSameSite) {
-                    if(link.charAt(0) == '/'){
-                        link = link.substring(1);
-                    }
-
-                    URL _url = new URL(url.toExternalForm() + link);
+                    URL _url = new URL(url.toExternalForm() + link.substring(1));
                     createFolder(filePath + link.substring(1));
                     linkDTO.setUrl(_url);
                     linkDTO.setPath(filePath + link.substring(1));
